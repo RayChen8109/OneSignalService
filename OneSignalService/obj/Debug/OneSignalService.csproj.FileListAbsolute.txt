@@ -1,0 +1,14 @@
+E:\1.Work\OneSignalService\bin\Debug\OneSignalService.exe.config
+E:\1.Work\OneSignalService\bin\Debug\OneSignalService.exe
+E:\1.Work\OneSignalService\bin\Debug\OneSignalService.pdb
+E:\1.Work\OneSignalService\bin\Debug\log4net.dll
+E:\1.Work\OneSignalService\bin\Debug\Topshelf.dll
+E:\1.Work\OneSignalService\bin\Debug\Topshelf.Log4Net.dll
+E:\1.Work\OneSignalService\bin\Debug\log4net.xml
+E:\1.Work\OneSignalService\bin\Debug\Topshelf.xml
+E:\1.Work\OneSignalService\bin\Debug\Topshelf.Log4Net.xml
+E:\1.Work\OneSignalService\obj\Debug\OneSignalService.csproj.CoreCompileInputs.cache
+E:\1.Work\OneSignalService\obj\Debug\OneSignalService.csproj.CopyComplete
+E:\1.Work\OneSignalService\obj\Debug\OneSignalService.exe
+E:\1.Work\OneSignalService\obj\Debug\OneSignalService.pdb
+E:\1.Work\OneSignalService\obj\Debug\OneSignalService.csprojAssemblyReference.cache

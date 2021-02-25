@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getChaPiPointJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getChaPiPointJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getChaPiPointJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getChaPiPointByCardnoJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CARD_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getChaPiPointByCardnoJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getChaPiPointByCardnoJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchaseHistoryJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchaseHistoryJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchaseHistoryJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkChaPiMemberJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberByMobileJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Birthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberByMobileJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkChaPiMemberByMobileJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberIDJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkChaPiMemberIDJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkChaPiMemberIDJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getECashListJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getECashListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getECashListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addChaPiMemberDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addChaPiMemberDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addChaPiMemberDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChaPiMemberDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChaPiMemberDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateChaPiMemberDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectChaPiMemberDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="selectChaPiMemberDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectChaPiMemberDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChaPiMemberAPPStatusJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateChaPiMemberAPPStatusJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateChaPiMemberAPPStatusJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkPromotionNoJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PromoType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PromoNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkPromotionNoJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkPromotionNoJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addChaPiPointSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OU_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addChaPiPointSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addChaPiPointSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCanUseEcashListJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCanUseEcashListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkCanUseEcashListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkEcashDetailJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLOY_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkEcashDetailJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkEcashDetailJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="countEcashAddAmtJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldEcashPloyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="countEcashAddAmtJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countEcashAddAmtJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkEcashIsAddAmtJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldEcashPloyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkEcashIsAddAmtJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkEcashIsAddAmtJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCouponContentJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COUPON_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkCouponContentJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkCouponContentJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkAPPMemberActivityJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLOY_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkAPPMemberActivityJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkAPPMemberActivityJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addGamePrizeJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLOY_NO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="POINT" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="eCASH_PLOYNO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eCASH_AMT" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addGamePrizeJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="addGamePrizeJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAPPLuckyWheelRuleJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLOY_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAPPLuckyWheelRuleJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAPPLuckyWheelRuleJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setServerMemberAPPVersionJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OS_SYSTEM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OS_VERSION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APP_VERSION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptionStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setServerMemberAPPVersionJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setServerMemberAPPVersionJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getChaPiPointJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getChaPiPointJSON" />
+  </wsdl:message>
+  <wsdl:message name="getChaPiPointJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getChaPiPointJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getChaPiPointByCardnoJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getChaPiPointByCardnoJSON" />
+  </wsdl:message>
+  <wsdl:message name="getChaPiPointByCardnoJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getChaPiPointByCardnoJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseHistoryJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchaseHistoryJSON" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseHistoryJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchaseHistoryJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberByMobileJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberByMobileJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberByMobileJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberByMobileJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberIDJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberIDJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkChaPiMemberIDJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkChaPiMemberIDJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getECashListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getECashListJSON" />
+  </wsdl:message>
+  <wsdl:message name="getECashListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getECashListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="addChaPiMemberDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:addChaPiMemberDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="addChaPiMemberDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:addChaPiMemberDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateChaPiMemberDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:updateChaPiMemberDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="updateChaPiMemberDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:updateChaPiMemberDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="selectChaPiMemberDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:selectChaPiMemberDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="selectChaPiMemberDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:selectChaPiMemberDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateChaPiMemberAPPStatusJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:updateChaPiMemberAPPStatusJSON" />
+  </wsdl:message>
+  <wsdl:message name="updateChaPiMemberAPPStatusJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:updateChaPiMemberAPPStatusJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkPromotionNoJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkPromotionNoJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkPromotionNoJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkPromotionNoJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="addChaPiPointSONSoapIn">
+    <wsdl:part name="parameters" element="tns:addChaPiPointSON" />
+  </wsdl:message>
+  <wsdl:message name="addChaPiPointSONSoapOut">
+    <wsdl:part name="parameters" element="tns:addChaPiPointSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCanUseEcashListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkCanUseEcashListJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkCanUseEcashListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkCanUseEcashListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkEcashDetailJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkEcashDetailJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkEcashDetailJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkEcashDetailJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="countEcashAddAmtJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:countEcashAddAmtJSON" />
+  </wsdl:message>
+  <wsdl:message name="countEcashAddAmtJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:countEcashAddAmtJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkEcashIsAddAmtJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkEcashIsAddAmtJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkEcashIsAddAmtJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkEcashIsAddAmtJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkCouponContentJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkCouponContentJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkCouponContentJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkCouponContentJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkAPPMemberActivityJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:checkAPPMemberActivityJSON" />
+  </wsdl:message>
+  <wsdl:message name="checkAPPMemberActivityJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:checkAPPMemberActivityJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="addGamePrizeJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:addGamePrizeJSON" />
+  </wsdl:message>
+  <wsdl:message name="addGamePrizeJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:addGamePrizeJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAPPLuckyWheelRuleJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:getAPPLuckyWheelRuleJSON" />
+  </wsdl:message>
+  <wsdl:message name="getAPPLuckyWheelRuleJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:getAPPLuckyWheelRuleJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="setServerMemberAPPVersionJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:setServerMemberAPPVersionJSON" />
+  </wsdl:message>
+  <wsdl:message name="setServerMemberAPPVersionJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:setServerMemberAPPVersionJSONResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MetroAppSoap">
+    <wsdl:operation name="getChaPiPointJSON">
+      <wsdl:input message="tns:getChaPiPointJSONSoapIn" />
+      <wsdl:output message="tns:getChaPiPointJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getChaPiPointByCardnoJSON">
+      <wsdl:input message="tns:getChaPiPointByCardnoJSONSoapIn" />
+      <wsdl:output message="tns:getChaPiPointByCardnoJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseHistoryJSON">
+      <wsdl:input message="tns:getPurchaseHistoryJSONSoapIn" />
+      <wsdl:output message="tns:getPurchaseHistoryJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberJSON">
+      <wsdl:input message="tns:checkChaPiMemberJSONSoapIn" />
+      <wsdl:output message="tns:checkChaPiMemberJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberByMobileJSON">
+      <wsdl:input message="tns:checkChaPiMemberByMobileJSONSoapIn" />
+      <wsdl:output message="tns:checkChaPiMemberByMobileJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberIDJSON">
+      <wsdl:input message="tns:checkChaPiMemberIDJSONSoapIn" />
+      <wsdl:output message="tns:checkChaPiMemberIDJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getECashListJSON">
+      <wsdl:input message="tns:getECashListJSONSoapIn" />
+      <wsdl:output message="tns:getECashListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiMemberDataJSON">
+      <wsdl:input message="tns:addChaPiMemberDataJSONSoapIn" />
+      <wsdl:output message="tns:addChaPiMemberDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberDataJSON">
+      <wsdl:input message="tns:updateChaPiMemberDataJSONSoapIn" />
+      <wsdl:output message="tns:updateChaPiMemberDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="selectChaPiMemberDataJSON">
+      <wsdl:input message="tns:selectChaPiMemberDataJSONSoapIn" />
+      <wsdl:output message="tns:selectChaPiMemberDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberAPPStatusJSON">
+      <wsdl:input message="tns:updateChaPiMemberAPPStatusJSONSoapIn" />
+      <wsdl:output message="tns:updateChaPiMemberAPPStatusJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkPromotionNoJSON">
+      <wsdl:input message="tns:checkPromotionNoJSONSoapIn" />
+      <wsdl:output message="tns:checkPromotionNoJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiPointSON">
+      <wsdl:input message="tns:addChaPiPointSONSoapIn" />
+      <wsdl:output message="tns:addChaPiPointSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCanUseEcashListJSON">
+      <wsdl:input message="tns:checkCanUseEcashListJSONSoapIn" />
+      <wsdl:output message="tns:checkCanUseEcashListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashDetailJSON">
+      <wsdl:input message="tns:checkEcashDetailJSONSoapIn" />
+      <wsdl:output message="tns:checkEcashDetailJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="countEcashAddAmtJSON">
+      <wsdl:input message="tns:countEcashAddAmtJSONSoapIn" />
+      <wsdl:output message="tns:countEcashAddAmtJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashIsAddAmtJSON">
+      <wsdl:input message="tns:checkEcashIsAddAmtJSONSoapIn" />
+      <wsdl:output message="tns:checkEcashIsAddAmtJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCouponContentJSON">
+      <wsdl:input message="tns:checkCouponContentJSONSoapIn" />
+      <wsdl:output message="tns:checkCouponContentJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAPPMemberActivityJSON">
+      <wsdl:input message="tns:checkAPPMemberActivityJSONSoapIn" />
+      <wsdl:output message="tns:checkAPPMemberActivityJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addGamePrizeJSON">
+      <wsdl:input message="tns:addGamePrizeJSONSoapIn" />
+      <wsdl:output message="tns:addGamePrizeJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAPPLuckyWheelRuleJSON">
+      <wsdl:input message="tns:getAPPLuckyWheelRuleJSONSoapIn" />
+      <wsdl:output message="tns:getAPPLuckyWheelRuleJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setServerMemberAPPVersionJSON">
+      <wsdl:input message="tns:setServerMemberAPPVersionJSONSoapIn" />
+      <wsdl:output message="tns:setServerMemberAPPVersionJSONSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MetroAppSoap" type="tns:MetroAppSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getChaPiPointJSON">
+      <soap:operation soapAction="http://tempuri.org/getChaPiPointJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChaPiPointByCardnoJSON">
+      <soap:operation soapAction="http://tempuri.org/getChaPiPointByCardnoJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseHistoryJSON">
+      <soap:operation soapAction="http://tempuri.org/getPurchaseHistoryJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberJSON">
+      <soap:operation soapAction="http://tempuri.org/checkChaPiMemberJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberByMobileJSON">
+      <soap:operation soapAction="http://tempuri.org/checkChaPiMemberByMobileJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberIDJSON">
+      <soap:operation soapAction="http://tempuri.org/checkChaPiMemberIDJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getECashListJSON">
+      <soap:operation soapAction="http://tempuri.org/getECashListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiMemberDataJSON">
+      <soap:operation soapAction="http://tempuri.org/addChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberDataJSON">
+      <soap:operation soapAction="http://tempuri.org/updateChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectChaPiMemberDataJSON">
+      <soap:operation soapAction="http://tempuri.org/selectChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberAPPStatusJSON">
+      <soap:operation soapAction="http://tempuri.org/updateChaPiMemberAPPStatusJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPromotionNoJSON">
+      <soap:operation soapAction="http://tempuri.org/checkPromotionNoJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiPointSON">
+      <soap:operation soapAction="http://tempuri.org/addChaPiPointSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCanUseEcashListJSON">
+      <soap:operation soapAction="http://tempuri.org/checkCanUseEcashListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashDetailJSON">
+      <soap:operation soapAction="http://tempuri.org/checkEcashDetailJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countEcashAddAmtJSON">
+      <soap:operation soapAction="http://tempuri.org/countEcashAddAmtJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashIsAddAmtJSON">
+      <soap:operation soapAction="http://tempuri.org/checkEcashIsAddAmtJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCouponContentJSON">
+      <soap:operation soapAction="http://tempuri.org/checkCouponContentJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAPPMemberActivityJSON">
+      <soap:operation soapAction="http://tempuri.org/checkAPPMemberActivityJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addGamePrizeJSON">
+      <soap:operation soapAction="http://tempuri.org/addGamePrizeJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAPPLuckyWheelRuleJSON">
+      <soap:operation soapAction="http://tempuri.org/getAPPLuckyWheelRuleJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setServerMemberAPPVersionJSON">
+      <soap:operation soapAction="http://tempuri.org/setServerMemberAPPVersionJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MetroAppSoap12" type="tns:MetroAppSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getChaPiPointJSON">
+      <soap12:operation soapAction="http://tempuri.org/getChaPiPointJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getChaPiPointByCardnoJSON">
+      <soap12:operation soapAction="http://tempuri.org/getChaPiPointByCardnoJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseHistoryJSON">
+      <soap12:operation soapAction="http://tempuri.org/getPurchaseHistoryJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkChaPiMemberJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberByMobileJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkChaPiMemberByMobileJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkChaPiMemberIDJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkChaPiMemberIDJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getECashListJSON">
+      <soap12:operation soapAction="http://tempuri.org/getECashListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiMemberDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/addChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/updateChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectChaPiMemberDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/selectChaPiMemberDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateChaPiMemberAPPStatusJSON">
+      <soap12:operation soapAction="http://tempuri.org/updateChaPiMemberAPPStatusJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPromotionNoJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkPromotionNoJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addChaPiPointSON">
+      <soap12:operation soapAction="http://tempuri.org/addChaPiPointSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCanUseEcashListJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkCanUseEcashListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashDetailJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkEcashDetailJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countEcashAddAmtJSON">
+      <soap12:operation soapAction="http://tempuri.org/countEcashAddAmtJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkEcashIsAddAmtJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkEcashIsAddAmtJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCouponContentJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkCouponContentJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAPPMemberActivityJSON">
+      <soap12:operation soapAction="http://tempuri.org/checkAPPMemberActivityJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addGamePrizeJSON">
+      <soap12:operation soapAction="http://tempuri.org/addGamePrizeJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAPPLuckyWheelRuleJSON">
+      <soap12:operation soapAction="http://tempuri.org/getAPPLuckyWheelRuleJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setServerMemberAPPVersionJSON">
+      <soap12:operation soapAction="http://tempuri.org/setServerMemberAPPVersionJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MetroApp">
+    <wsdl:port name="MetroAppSoap" binding="tns:MetroAppSoap">
+      <soap:address location="https://www.metrowalk.com.tw/metrowebsrv/metroapp.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MetroAppSoap12" binding="tns:MetroAppSoap12">
+      <soap12:address location="https://www.metrowalk.com.tw/metrowebsrv/metroapp.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
