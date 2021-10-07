@@ -3,7 +3,7 @@
 
 ```
 graph TD
-    A[App] --> B(Main)
+    A[App] -->B(Main)
     
 ```
 B --> C[Home]
