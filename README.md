@@ -3,11 +3,12 @@
 
 ```
 graph TD
-    A(App) --> B[Main]
-    B --> C[Home]
+    A[App] --> B(Main)
+    
+```
+B --> C[Home]
     B --> D[IntroduceBand]
     B --> E[IntroduceTeam]
     B --> F[ProformanceInfo]
     B --> G[News]
     B --> H[Recruit]
-```
